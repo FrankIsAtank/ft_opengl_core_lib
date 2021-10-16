@@ -1,4 +1,4 @@
-# CMake version expected
+## CMake version expected
 cmake_minimum_required(VERSION 3.18)
 
 # Project title
@@ -35,9 +35,7 @@ macro(ft_add_group group_name)
 
 endmacro()
 
-ft_add_group("context")
-ft_add_group("coregl")
-ft_add_group("renderframe")
+ft_add_group("shader")
 
 
 # include the files
@@ -54,6 +52,7 @@ set_target_properties(FT_OPENGL_CORE_LIB PROPERTIES
 )
 
 include_directories(${FT_LIB_ROOT}/ft_base_lib/src)
+include_directories(${FT_LIB_ROOT}/ft_opengl_base_lib/src)
 include_directories(${FT_LIB_ROOT}/ft_opengl_core_lib/src)
 include_directories(${FT_LIB_ROOT}/ft_platform_lib/src)
 include_directories(${FT_LIB_ROOT}/ft_math_lib/src)
